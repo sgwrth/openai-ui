@@ -1,0 +1,19 @@
+<div>
+
+  <h1>OpenAI</h1>
+
+  <form [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+
+    <div>
+      <label for="question"><b>Your question</b></label>
+    </div>
+    <input id="question" type="text" formControlName="question">
+
+    <button class="button" type="submit">Ask</button>
+
+  </form>
+
+  <div *ngIf="answer.generation !== ''"><b>Answer</b></div>
+  <div>{{ answer.generation }}</div>
+
+</div>
